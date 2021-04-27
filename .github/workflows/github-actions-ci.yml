@@ -1,7 +1,6 @@
 name: Pull Request
 
-on:
-  pull_request:
+on: pull_request
 
 jobs:
   build:
@@ -27,5 +26,5 @@ jobs:
 
       - name: Run tests
         run: flutter test
-        
+
       - run: echo "FINISHED. Build has been completed."
