@@ -9,7 +9,7 @@ class CreateAccountViewModel extends AuthenticationViewModel {
   final _firebaseAuthenticationService =
       locator<FirebaseAuthenticationService>();
 
-  CreateAccountViewModel() : super(successRoute: Routes.addressSelectionView);
+  CreateAccountViewModel() : super(successRoute: Routes.userView);
 
   @override
   Future<FirebaseAuthenticationResult> runAuthentication() =>

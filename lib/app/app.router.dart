@@ -13,16 +13,19 @@ import '../ui/address_selection/address_selection_view.dart';
 import '../ui/authentication/create_account/create_account_view.dart';
 import '../ui/authentication/login/login_view.dart';
 import '../ui/startup/startup_view.dart';
+import '../ui/user/user_view.dart';
 
 class Routes {
   static const String startUpView = '/start-up-view';
   static const String addressSelectionView = '/address-selection-view';
   static const String createAccountView = '/create-account-view';
+  static const String userView = '/user-view';
   static const String loginView = '/';
   static const all = <String>{
     startUpView,
     addressSelectionView,
     createAccountView,
+    userView,
     loginView,
   };
 }
@@ -34,6 +37,7 @@ class StackedRouter extends RouterBase {
     RouteDef(Routes.startUpView, page: StartUpView),
     RouteDef(Routes.addressSelectionView, page: AddressSelectionView),
     RouteDef(Routes.createAccountView, page: CreateAccountView),
+    RouteDef(Routes.userView, page: UserView),
     RouteDef(Routes.loginView, page: LoginView),
   ];
   @override
@@ -57,6 +61,12 @@ class StackedRouter extends RouterBase {
       );
       return MaterialPageRoute<dynamic>(
         builder: (context) => CreateAccountView(key: args.key),
+        settings: data,
+      );
+    },
+    UserView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const UserView(),
         settings: data,
       );
     },
