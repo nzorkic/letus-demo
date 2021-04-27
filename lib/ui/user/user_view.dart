@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:letus/app/app.locator.dart';
-import 'package:letus/services/user_service.dart';
 
 class UserView extends StatelessWidget {
-  final UserService _userService = locator<UserService>();
+  //final UserService _userService = locator<UserService>();
 
-  UserView({Key? key}) : super(key: key);
+  const UserView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
