@@ -11,11 +11,11 @@ import 'package:stacked_services/stacked_services.dart';
 
 @StackedApp(
   routes: [
-    MaterialRoute(page: StartUpView),
+    MaterialRoute(page: StartUpView, initial: true),
     MaterialRoute(page: AddressSelectionView),
     MaterialRoute(page: CreateAccountView),
     MaterialRoute(page: UserView),
-    MaterialRoute(page: LoginView, initial: true),
+    MaterialRoute(page: LoginView),
   ],
   dependencies: [
     LazySingleton(classType: NavigationService),
