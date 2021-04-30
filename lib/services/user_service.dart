@@ -12,6 +12,8 @@ class UserService {
 
   User? _currentUser;
 
+  bool get hasLoggedInUser => _firebaseAuthService.hasUser;
+
   User get currentUser => _currentUser!;
 
   Future<void> syncUserAccount() async {
